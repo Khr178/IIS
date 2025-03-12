@@ -1,5 +1,9 @@
 <<<<<<< HEAD
-# IIS
+# Integration of Information Systems Labs
+# This repository contains labs related to the IIS course.
+# Created by Kopeika Khrystyna
+# Group PI-32
+# LPNU
 =======
 # [Vue Paper Dashboard](https://cristijora.github.io/vue-paper-dashboard/)
 
