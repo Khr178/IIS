@@ -14,29 +14,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
         
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '18'
-          
-      - name: Install dependencies
-        run: npm ci
-        
-      - name: Build project
-        run: npm run build
-        
-      - name: Cache build artifacts
-        uses: actions/cache@v2
-        with:
-          path: |
-            dist
-            build
-          key: ${{ runner.os }}-build-${{ github.sha }}
-          restore-keys: |
-            ${{ runner.os }}-build-
-            
-      - name: Deploy to production
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+      - name: Build code with timestamp
         run: |
-          echo "Deploying to production environment"
-          # Add your deployment commands here
+          echo "Build successful at $(date)"
+          
+      - name: Current time
+        run: |
+          echo "Current time is $(date)"
+          
+      - name: Display formatted timestamp
+        run: |
+          echo "Task completed"
